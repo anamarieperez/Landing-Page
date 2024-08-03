@@ -1,6 +1,6 @@
-import React from 'react'
-import logo from "../Assets/Logo.svg";
-import {BsCart2} from "react-icons-bs";
+import React, { useState } from 'react';
+import Logo from "../Assets/Logo.svg";
+import {BsCart2} from "react-icons/bs";
 import {HiOutlineBars3} from "react-icons/hi2";
 import {
     Box,
@@ -10,44 +10,45 @@ import {
     ListItemIcon,
     ListItemText
 } from "@mui/material";
-import {HomeIcon} from "@mui/icons-material/Home";
-import {InfoIcon} from "@mui/icons-material/Info";
-import {CommentRoundedIcon} from "@mui/icons-material/CommentRounded";
-import {PhoneRoundedIcon} from "@mui/icons-material/PhoneRounded";
-import {ShoppingCartRoundedIcon} from "@mui/icons-material/ShoppingCartRounded";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
+import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+
 const Navbar = () => {
 
-    const [OpenMenu,setOpenMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false);
     const menuOptions = [
         {
-        text :"Home",
-        icon :<HomeIcon/>
+        text: "Home",
+        icon: <HomeIcon/>,
         },
         {
-        text :"About",
-        icon :<InfoIcon/>
+        text: "About",
+        icon: <InfoIcon/>,
         },
         {
-        text :"Testimonials",
-        icon :<CommentRoundedIcon/>
+        text: "Testimonials",
+        icon: <CommentRoundedIcon/>,
         },
         {
-        text :"Contact",
-        icon :<PhoneRoundedIcon/>
+        text: "Contact",
+        icon: <PhoneRoundedIcon/>,
         },
         {
-        text :"Cart",
-        icon :<ShoppingCartRoundedIcon/>
+        text: "Cart",
+        icon: <ShoppingCartRoundedIcon/>,
         },
-    ]
+    ];
 
   return (
     <nav>
-        <div classname="nav-logo-container">
+        <div className="nav-logo-container">
            <img src={Logo} alt=""/>
         </div>
-        <div classname="nav-links-container">
-           <a href="">Home</a>
+        <div className="navbar-links-container">
+           <a href=""className="navbar-links-containers">Home</a>
            <a href="">About</a>
            <a href="">Testimonials</a>
            <a href="">Contact</a>
@@ -57,11 +58,31 @@ const Navbar = () => {
            <button className="primary-button">Bookings Now</button>
         </div>
         <div className="navbar-menu-container">
-            <HiOutlineBars3 onclick = { () => setOpenMenu}/>
+            <HiOutlineBars3 onclick = { () => setOpenMenu(true)}/>
+        </div>  
+        <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
+     <Box
+         sx={{width:250}}
+         role="presentation"
+         onClick={() => setOpenMenu(false)}
+         onKeyDown={() => setOpenMenu(false)}  
+         >
 
-        </div>
+     <list>
+         {menuOptions.map((item) => (
+             <ListItem key={item.text} disablePadding>
+                 <ListItemButton>
+                     <ListItemIcon>{item.icon}</ListItemIcon>
+                     <ListItemText primary={item.text}></ListItemText>
+                 </ListItemButton>
+             </ListItem>
+         ))}
+     </list>
+     </Box>
+    </Drawer>    
     </nav>
-  )
-}
+    
+  );
+};
 
-export default Navbar
+export default Navbar;
