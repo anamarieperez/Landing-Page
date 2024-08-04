@@ -1,5 +1,5 @@
-import React from 'react'
-import Pickmeals from "../Assets/pick-meals-image.png";
+import React from "react";
+import PickMeals from "../Assets/pick-meals-image.png";
 import ChooseMeals from "../Assets/choose-image.png";
 import DeliveryMeals from "../Assets/delivery-image.png";
 
@@ -12,12 +12,12 @@ const Work = () => {
         },
         {
             image: ChooseMeals,
-            title: "Choose Meals",
+            title: "Choose How Often",
             text:  "gdfjlk jgdfklgjfk kjfgdklgjkg jdfgkfkdjg gdfgfd df",
         },
         {
             image: DeliveryMeals,
-            title: "Delivery Meals",
+            title: "Fast Deliveries",
             text:  "gdfjlk jgdfklgjfk kjfgdklgjkg jdfgkfkdjg gdfgfd df",
         },
     ];
@@ -25,7 +25,7 @@ const Work = () => {
     <div className="work-section-wrapper">
         <div className="work-section-top">
             <p className="primary-subheading"> Work </p>
-            <h1 className="primary-subheading">How It Works</h1>
+            <h1 className="primary-heading">How It Works</h1>
             <p className="primary-text">
                 hjhjhldg lkhgdflghl kldgfjgkl kldfgjk dfkgjfdklgj dflkgjkg
             </p>
