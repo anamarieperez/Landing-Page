@@ -17,16 +17,17 @@ const Testimonial = () => {
             <p>dshfsdlkh lshdfjfhdj sdhflsdhf lkdskj sdjfds dslkjfdsfj
                 kjdksj ksjdkfjk ksdjfksdjf l n nsdl
             </p>
-            <div className="testimonial-stars-container"> </div>
+            <div className="testimonials-stars-container"> 
             <AiFillStar/>
             <AiFillStar/>
             <AiFillStar/>
             <AiFillStar/>
             <AiFillStar/>
+            </div>  
+            <h2>John Doe</h2>
         </div>
-        <h2>John Doe</h2>
     </div>
-  )
-}
+  );
+};
 
 export default Testimonial
