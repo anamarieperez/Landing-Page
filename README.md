@@ -22,7 +22,7 @@ In app.js, I removed import Logo from ‘./logo.svg’; and header tag
 Then clearup app.css
 
 Imported:
-Paste the code fromfonts.google.com in index.html to embed a specific fonts
+Paste the code from fonts.google.com in index.html to embed a specific fonts
 
 Installed
 Extension:
