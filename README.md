@@ -1,4 +1,4 @@
-#creating landing page using react.js
+# creating landing page using react.js
 Learning React.js, I chose to adhere to a YouTube tutorial and use the insights I gained to make a sample landing page. . I first create an empty folder and open it on VS Studio code editor then setup initial react project by typing the below command in the terminal.
 
 npx create-react-app ./
